@@ -19,12 +19,13 @@ echo "PingDataSync - 127.0.0.1:${LDAPS_PORT} appears available"
 #
 # Wait for PingDirectory before continuing
 #
-while true; do
-    echo "Waiting for PingDirectory - ${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT}..."
-    wait-for "${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT}" -q -t 30 && break
-done
-echo "PingDirectory - ${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT} appears available"
-sleep 2
+### JKr commented out below
+#while true; do
+#    echo "Waiting for PingDirectory - ${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT}..."
+#    wait-for "${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT}" -q -t 30 && break
+#done
+#echo "PingDirectory - ${PD_ENGINE_PRIVATE_HOSTNAME}:${LDAPS_PORT} appears available"
+#sleep 2
 
 #
 # Set the sync pipe at the beginning of the changelog
